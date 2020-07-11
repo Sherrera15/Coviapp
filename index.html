@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coviapp</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBzsiMVwgYGk1H37aslPhbhWhIuDe0mbos",
+        authDomain: "coviapp-e5295.firebaseapp.com",
+        databaseURL: "https://coviapp-e5295.firebaseio.com",
+        projectId: "coviapp-e5295",
+        storageBucket: "coviapp-e5295.appspot.com",
+        messagingSenderId: "914656651217",
+        appId: "1:914656651217:web:536fcd561a0cf403a922f0",
+        measurementId: "G-PEYPB0NT0G"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </head>
+
+
+  <body>
+    <img class="place" src="img/place.png" alt="Fondo">
+
+    <div class="container">
+        <div class="login">
+          <img class ="profile" src="img/profile.PNG" alt="">
+          <h2 class="title">¡Hola, bienvenido(a)!</h2>
+          <div class="input-div-one">
+            <div class="">
+              <h5>Correo electrónico:</h5>
+              <input type="text" class="input" placeholder="Ingrese su correo">
+            </div>
+          </div>
+          <div class="input-div-two">
+            <div>
+              <h5>Contraseña:</h5>
+              <input type="password" class="input" placeholder="Ingrese sus credenciales">
+            </div>
+          </div>
+          <input type="submit" class="btn-enter" value="Ingresar">
+          <a href="#" class="item1">¿Olvidaste la contraseña?</a><br>
+          <a href="#" class="item1">¿No tienes cuenta?</a>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="app.js">
+
+    </script>
+
+  </body>
+
+
+</html>
