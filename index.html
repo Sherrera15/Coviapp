@@ -5,62 +5,71 @@
     <title>Coviapp</title>
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyBzsiMVwgYGk1H37aslPhbhWhIuDe0mbos",
-        authDomain: "coviapp-e5295.firebaseapp.com",
-        databaseURL: "https://coviapp-e5295.firebaseio.com",
-        projectId: "coviapp-e5295",
-        storageBucket: "coviapp-e5295.appspot.com",
-        messagingSenderId: "914656651217",
-        appId: "1:914656651217:web:536fcd561a0cf403a922f0",
-        measurementId: "G-PEYPB0NT0G"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-    </script>
   </head>
 
 
   <body>
-    <img class="place" src="img/place.png" alt="Fondo">
+   <img class="place" src="img/place.png" alt="Fondo">
 
     <div class="container">
         <div class="login">
+          <form id= "login-form" action="index.html" method="post">
           <img class ="profile" src="img/profile.PNG" alt="">
           <h2 class="title">¡Hola, bienvenido(a)!</h2>
           <div class="input-div-one">
             <div class="">
               <h5>Correo electrónico:</h5>
-              <input type="text" class="input" placeholder="Ingrese su correo">
+              <input id="email" type="text" class="input" placeholder="Ingrese su correo" required>
             </div>
           </div>
           <div class="input-div-two">
             <div>
               <h5>Contraseña:</h5>
-              <input type="password" class="input" placeholder="Ingrese sus credenciales">
+              <input id="password" type="password" class="input" placeholder="Ingrese sus credenciales" required>
             </div>
           </div>
           <input type="submit" class="btn-enter" value="Ingresar">
           <a href="#" class="item1">¿Olvidaste la contraseña?</a><br>
           <a href="#" class="item1">¿No tienes cuenta?</a>
 
-
+          </form>
         </div>
     </div>
+<!-- Firebase -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBzsiMVwgYGk1H37aslPhbhWhIuDe0mbos",
+    authDomain: "coviapp-e5295.firebaseapp.com",
+    databaseURL: "https://coviapp-e5295.firebaseio.com",
+    projectId: "coviapp-e5295",
+    storageBucket: "coviapp-e5295.appspot.com",
+    messagingSenderId: "914656651217",
+    appId: "1:914656651217:web:536fcd561a0cf403a922f0",
+    measurementId: "G-PEYPB0NT0G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+</script>
 
+  <script src="main.js">
 
-
-
-    <script src="app.js">
-
-    </script>
-
+  </script>
   </body>
 
 
