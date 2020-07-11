@@ -18,33 +18,48 @@
 
 
     <body>
-      <div class="place">
-        <img src="img/place.png" alt="Fondo"
+      <header>
+        <section class="text-header">
+          <h1><b>Coviapp</b></h1>
+          <h2><b>Una aplicación que te ayuda a estar enterado</b></h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+      </header>
 
-      </div>
-
-      <div class="container">
-          <div class="login">
-            <form id= "login-form" action="index.html">
-            <img class ="profile" src="img/profile.PNG" alt="">
-            <h2 class="title"><b>¡Hola, bienvenido(a)!</b></h2>
-            <div class="input-div-one">
-              <div class="">
-                <h5 class="txt"><b>Correo electrónico:</b></h5>
-                <input id="email" type="text" class="input" placeholder="Ingrese su correo" required>
+      <main>
+        <section class="container login">
+          <h2 class="title"><b>¡Hola, bienvenido(a)!</b></h2>
+          <div class="container-login">
+            <img src="img/profile.PNG" alt="Logo perfil" class="imagen-about-us">
+            <div class="container-text">
+              <form id= "login-form" action="index.html">
+              <div class="input-div-one">
+                <div class=""><br><br>
+                  <h4><b>¡Ingresa aquí!</b></h4><br>
+                  <h5 class="txt">Correo electrónico:</h5>
+                  <input id="email" type="text" class="input" placeholder="Ingrese su correo" required><br><br>
+                </div>
               </div>
-            </div>
-            <div class="input-div-two">
-              <div>
-                <h5 class="txt"><b>Contraseña:</b></h5>
-                <input id="password" type="password" class="input" placeholder="Ingrese su contraseña" required>
+              <div class="input-div-two">
+                <div>
+                  <h5 class="txt">Contraseña:</h5>
+                  <input id="password" type="password" class="input" placeholder="Ingrese su contraseña" required><br><br>
+                </div>
               </div>
-            </div>
-            <input type="submit" class="btn-enter" value="Ingresar"><br><br><br><br>
 
-            </form>
+              <input type="submit" class="btn-enter" value="Ingresar">
+
+              </form>
+            </div>
           </div>
-      </div>
+        </section>
+      </main>
+
+
 
     <!-- BOOTSTRAP SCRIPT -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

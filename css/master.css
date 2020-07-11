@@ -1,4 +1,4 @@
-*{
+/* *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -97,26 +97,8 @@ body{
   font-size: 12px;
 }
 
-.input-div{
-  display: grid;
-  grid-template-columns: 7% 93%;
-  margin: 25px 0;
-  padding: 5px 0;
-  border-bottom: 2px solid #d9d9d9;
-}
 
-.input-div-one{
-  margin-top: 0;
-}
 
-.input-div-one{
-  margin-bottom: 4px;
-}
-
-.input-div > div{
-  position: relative;
-  height: 45px;
-}
 
 a{
   display: block;
@@ -154,9 +136,151 @@ a:hover{
   align-content: center;
 }
 
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.title {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/Logos.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/Logos.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header .text-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.text-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Login */
+
+
+main .login{
+    padding: 30px 0 60px 0;
+
+}
+.container-login{
+    display: flex;
+    justify-content: center;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10rem;
+
+}
+
+.imagen-about-us{
+    width: 48%;
+    height: 48%;
+
+
+}
+
+.login .container-text{
+
+    background: #f3def3;
+    display: flex;
+    width: 50%;
+    height: 25rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+
+}
+
+.container-text h5{
+    margin-bottom: 15px;
+    color: #bc4e9c;
+    text-align: center;
+}
+.container-text h4{
+    margin-bottom: 15px;
+    color: #bc4e9c;
+    text-align: center;
+}
+
+.btn-enter{
+  display: block;
+  width: 65%;
+  height: 30px;
+  border-radius: 25px;
+  margin: 1rem 0;
+  margin-left: 38px;
+  font-size: 0.9rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color:#bc4e9c;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.btn-enter:hover{
+  color: #38d39f;
+  background-position: right;
+  align-content: center;
+}
+
 .input{
   border-radius: 5px;
   width: 140%;
   height: 30px;
-  border-color: #38d39f;
+  border-color: #b83db8;
 }
