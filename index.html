@@ -3,6 +3,7 @@
     <head>
       <meta charset="utf-8">
       <title>Coviapp</title>
+      <link rel="shortcut icon" href="img/virus.png" type="image/x-icon">
       <!-- CSS -->
       <link rel="stylesheet" href="css/master.css">
       <!-- GOOGLE FONTS -->
@@ -19,9 +20,9 @@
 
     <body>
       <header>
-        <section class="text-header">
-          <h1><b>Coviapp</b></h1>
-          <h2><b>Una aplicación que te ayuda a estar enterado</b></h2>
+        <section class="text-header"><br><br>
+          <h1><b>Coviapp</b></h1><br>
+          <h2><b>Una aplicación que te ayuda a estar al dia con el Covid-19</b></h2>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
@@ -36,29 +37,43 @@
           <div class="container-login">
             <img src="img/profile.PNG" alt="Logo perfil" class="imagen-about-us">
             <div class="container-text">
-              <form id= "login-form" action="index.html">
+              <form id= "login-form" action="index.html" onsubmit="return validation();">
               <div class="input-div-one">
                 <div class=""><br><br>
                   <h4><b>¡Ingresa aquí!</b></h4><br>
                   <h5 class="txt">Correo electrónico:</h5>
-                  <input id="email" type="text" class="input" placeholder="Ingrese su correo" required><br><br>
+                  <input id="email" type="text" class="input" placeholder="Ingrese su correo"><br><br>
                 </div>
               </div>
               <div class="input-div-two">
                 <div>
                   <h5 class="txt">Contraseña:</h5>
-                  <input id="password" type="password" class="input" placeholder="Ingrese su contraseña" required><br><br>
+                  <input id="password" type="password" class="input" placeholder="Ingrese su contraseña"><br><br>
                 </div>
               </div>
 
-              <input type="submit" class="btn-enter" value="Ingresar">
+
+              <input src="page.html" type="submit" class="btn-enter" value="Ingresar">
+
 
               </form>
             </div>
           </div>
         </section>
       </main>
-
+      <footer>
+          <div class="contenedor-footer">
+              <div class="content-foo">
+                  <h4>#QuedateEnCasa</h4>
+                  <p>¡Cuida a los tuyos!</p>
+              </div>
+              <div class="content-foo">
+                  <h4>#Covid19</h4>
+                  <p>Barranquilla</p>
+              </div>
+          </div>
+          <h2 class="titulo-final">&copy; Shadia Herrera A. | Prueba.</h2>
+      </footer>
 
 
     <!-- BOOTSTRAP SCRIPT -->
@@ -95,9 +110,10 @@
     const auth = firebase.auth();
   </script>
 
-    <script src="main.js">
-
-    </script>
+    <script src="main.js"> </script>
+      <!-- Libreria de alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="sweetAlert.js"></script
     </body>
 
 

@@ -1,5 +1,5 @@
-//Registro
-
+// Registro
+//
 // const loginForm = document.querySelector('#login-form');
 //
 // loginForm.addEventListener('submit', (e) => {
@@ -13,7 +13,7 @@
 //       .then(userCredential =>{
 //         //Clear form.
 //         loginForm.reset();
-//
+// 
 //         console.log('Ok')
 //       })
 // })
@@ -32,7 +32,23 @@ loginForm.addEventListener('submit', e => {
           //Clear form.
           loginForm.reset();
 
+          Swal.fire({
+            title: "Ingreso éxitoso",
+            icon: "success"
+          })
+
+          window.location.href = 'page.html';
+
           console.log('Ok')
         })
 
+})
+
+auth.onAuthStateChanged(user =>{
+  if(user){
+    alert("Inició sesión un usuario.");
+  }
+  else{
+    alert('No hay usuarios conectados!');
+  }
 })
