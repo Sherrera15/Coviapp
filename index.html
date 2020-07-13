@@ -1,43 +1,42 @@
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <title>Coviapp</title>
-      <link rel="shortcut icon" href="img/virus.png" type="image/x-icon">
-      <!-- CSS -->
-      <link rel="stylesheet" href="css/master.css">
-      <!-- GOOGLE FONTS -->
-      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-      <!-- FIREBASE -->
-      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
-      <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-      <!-- BOOTSTRAP -->
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    </head>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Coviapp</title>
+    <link rel="shortcut icon" href="img/virus.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/master.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- BOOTSTRAP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
 
 
-    <body>
-      <header>
-        <section class="text-header"><br><br>
-          <h1><b>Coviapp</b></h1><br>
-          <h2><b>Una aplicación que te ayuda a estar al dia con el Covid-19</b></h2>
-        </section>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
-            </svg></div>
-      </header>
+  <body>
+    <header>
+      <section class="text-header"><br><br>
+        <h1><b>¡Coviapp!</b></h1><br>
+        <h2><b>Una aplicación que te ayuda a estar al dia con el Covid-19</b></h2>
+      </section>
+      <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+          <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+        </svg></div>
+    </header>
 
-      <main>
-        <section class="container login">
-          <h2 class="title"><b>¡Hola, bienvenido(a)!</b></h2>
-          <div class="container-login">
-            <img src="img/profile.PNG" alt="Logo perfil" class="imagen-about-us">
-            <div class="container-text">
-              <form id= "login-form" action="index.html" onsubmit="return validation();">
+    <main>
+      <section class="container login">
+        <h2 class="title"><b>¡Hola, bienvenido(a)!</b></h2>
+        <div class="container-login">
+          <img src="img/profile.png" alt="Logo perfil" class="imagen-about-us">
+          <div class="container-text">
+            <form id="login-form" action="index.html" onsubmit="return validation();">
               <div class="input-div-one">
                 <div class=""><br><br>
                   <h4><b>¡Ingresa aquí!</b></h4><br>
@@ -56,65 +55,68 @@
               <input src="page.html" type="submit" class="btn-enter" value="Ingresar">
 
 
-              </form>
-            </div>
+            </form>
           </div>
-        </section>
-      </main>
-      <footer>
-          <div class="contenedor-footer">
-              <div class="content-foo">
-                  <h4>#QuedateEnCasa</h4>
-                  <p>¡Cuida a los tuyos!</p>
-              </div>
-              <div class="content-foo">
-                  <h4>#Covid19</h4>
-                  <p>Barranquilla</p>
-              </div>
-          </div>
-          <h2 class="titulo-final">&copy; Shadia Herrera A. | Prueba.</h2>
-      </footer>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contenedor-footer">
+        <div class="content-foo">
+          <h4>#QuedateEnCasa</h4>
+          <p>¡Cuida a los tuyos!</p>
+        </div>
+        <div class="content-foo">
+          <h4>#Covid19</h4>
+          <p>Barranquilla</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">&copy; Shadia Herrera A. | Prueba.</h2>
+    </footer>
 
 
     <!-- BOOTSTRAP SCRIPT -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 
-  <!-- Firebase -->
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyBzsiMVwgYGk1H37aslPhbhWhIuDe0mbos",
-      authDomain: "coviapp-e5295.firebaseapp.com",
-      databaseURL: "https://coviapp-e5295.firebaseio.com",
-      projectId: "coviapp-e5295",
-      storageBucket: "coviapp-e5295.appspot.com",
-      messagingSenderId: "914656651217",
-      appId: "1:914656651217:web:536fcd561a0cf403a922f0",
-      measurementId: "G-PEYPB0NT0G"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    const auth = firebase.auth();
-  </script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDt4YrsmSpLH0sB0DyJfDgLCeAYHIssNK8",
+        authDomain: "appcovid-48869.firebaseapp.com",
+        databaseURL: "https://appcovid-48869.firebaseio.com",
+        projectId: "appcovid-48869",
+        storageBucket: "appcovid-48869.appspot.com",
+        messagingSenderId: "894231800221",
+        appId: "1:894231800221:web:47528c32b7bbf954e9e774",
+        measurementId: "G-3P6ZV1SV0M"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const auth = firebase.auth();
+    </script>
 
     <script src="main.js"> </script>
-      <!-- Libreria de alertas -->
+    <!-- Libreria de alertas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="sweetAlert.js"></script
-    </body>
+    <script src="sweetAlert.js">
+      < /script
+      </body>
 
 
-  </html>
+
+      </html>

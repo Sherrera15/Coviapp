@@ -13,7 +13,7 @@
 //       .then(userCredential =>{
 //         //Clear form.
 //         loginForm.reset();
-// 
+//
 //         console.log('Ok')
 //       })
 // })
@@ -27,28 +27,28 @@ loginForm.addEventListener('submit', e => {
   const password = document.querySelector('#password').value;
 
   auth
-        .signInWithEmailAndPassword(email, password)
-        .then(userCredential =>{
-          //Clear form.
-          loginForm.reset();
+    .signInWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      //Clear form.
+      loginForm.reset();
 
-          Swal.fire({
-            title: "Ingreso éxitoso",
-            icon: "success"
-          })
+      Swal.fire({
+        title: "Ingreso éxitoso",
+        icon: "success"
+      })
 
-          window.location.href = 'page.html';
+      window.location.href = 'page.html';
 
-          console.log('Ok')
-        })
+      console.log('Ok')
+    })
 
 })
 
-auth.onAuthStateChanged(user =>{
-  if(user){
-    alert("Inició sesión un usuario.");
-  }
-  else{
-    alert('No hay usuarios conectados!');
-  }
-})
+// auth.onAuthStateChanged(user =>{
+//   if(user){
+//     alert("Inició sesión un usuario.");
+//   }
+//   else{
+//     alert('No hay usuarios conectados!');
+//   }
+// })
