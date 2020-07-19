@@ -161,6 +161,8 @@ main .login {
 
 /*PAGE.HTML*/
 /* Formulario */
+/*Tabla*/
+/**/
 .container {
   max-width: 1170px;
   margin-left: auto;
@@ -181,7 +183,7 @@ ul {
   color: #C8A2C8;
 }
 
-h1 {
+h4 {
   color: #572364;
 }
 
@@ -227,17 +229,21 @@ h3 {
 .contact form .full {
   grid-column: 1 / 3;
 }
-
+.form-action-buttons{
+  text-align: center;
+}
 .contact form button, .contact form input, .contact form textarea {
   width: 100%;
   padding: 1em;
   border: 1px solid #c9e6ff;
+
 }
 
 .contact form button {
   background: #C8A2C8;
   border: 0;
   text-transform: uppercase;
+
 }
 
 .contact form button:hover, .contact form button:focus {
@@ -245,6 +251,7 @@ h3 {
   color: #fff;
   outline: 0;
   transition: background-color 2s ease-out;
+
 }
 
 .alert {
