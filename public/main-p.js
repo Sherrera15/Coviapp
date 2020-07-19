@@ -11,6 +11,9 @@ logout.addEventListener('click', e => {
       });
 });
 
+//photo
+
+
 //Guardar en localStorage
 
 var ident = [],
@@ -41,18 +44,6 @@ elementBotonAgregar.addEventListener('click', aggPatients );
 
 var selectedRow = null;
 
-function reset(){
-  document.getElementById("identification").value = "";
-  document.getElementById("name").value = "";
-  document.getElementById("lastname").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("address").value = "";
-  document.getElementById("photo").value = "";
-  document.getElementById("message").value = "";
-    selectedRow = null;
-
-}
 
 function aggPatients(){
   var identification = document.querySelector('#identification').value,

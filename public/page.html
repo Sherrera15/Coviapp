@@ -173,7 +173,7 @@
         </div>
         <div class="card-body">
           <div class="contact">
-          <form>
+          <form id="contactForm">
               <div>
                   <label>ID</label>
                   <input type="number" name="identification" id="identification">
@@ -201,13 +201,15 @@
               <div>
                   <label>Foto</label>
                   <input type="file" name="photo" id="photo">
+                
               </div>
               <div>
                   <label>Observación</label>
                   <input type="text" name="message" id="message">
               </div>
               <div  class="form-action-buttons">
-                  <button type="button" name="button" id = "saveBtn">Agregar</button>
+                  <button type="button" name="button" class="agg" id = "saveBtn">Agregar</button>
+                  <button type="reset" name="button" class="agg" id = "saveReset">Limpiar</button>
               </div>
           </form>
         </div>

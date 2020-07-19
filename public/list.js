@@ -9,6 +9,8 @@ function fillTable(){
   //Que se encuentre limpio.
   tbody.innerHTML = '';
 
+
+
   var ident = JSON.parse(localStorage.getItem('ID')),
       names = JSON.parse(localStorage.getItem('name')),
       lastnames = JSON.parse(localStorage.getItem('lastname')),
