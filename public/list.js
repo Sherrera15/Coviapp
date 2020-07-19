@@ -9,8 +9,6 @@ function fillTable(){
   //Que se encuentre limpio.
   tbody.innerHTML = '';
 
-
-
   var ident = JSON.parse(localStorage.getItem('ID')),
       names = JSON.parse(localStorage.getItem('name')),
       lastnames = JSON.parse(localStorage.getItem('lastname')),
@@ -46,7 +44,7 @@ function fillTable(){
     nodoTextPhone = document.createTextNode(phones[i]),
     nodoTextAddress = document.createTextNode(addresse[i]),
     nodoTextPhoto = document.createTextNode(photos[i]),
-     nodoTextMessage = document.createTextNode(messages[i]);
+    nodoTextMessage = document.createTextNode(messages[i]);
 
     celdaID.appendChild(nodoTextID);
     celdaName.appendChild(nodoTextName);
@@ -65,7 +63,7 @@ function fillTable(){
     row.appendChild(celdaPhone);
     row.appendChild(celdaAddress);
     row.appendChild(celdaPhoto);
-     row.appendChild(celdaMessage);
+    row.appendChild(celdaMessage);
 
     tbody.appendChild(row);
 

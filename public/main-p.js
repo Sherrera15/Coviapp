@@ -1,18 +1,15 @@
 //Cerrar sesión
 const logout = document.querySelector('#logout');
-
 logout.addEventListener('click', e => {
       e.preventDefault();
       auth.signOut().then(() => {
             Swal.fire({
               title: "Su sesión finalizó",
               icon: "success"
-          });
-      });
-});
-
-//photo
-
+          })
+          window.location.href = 'index.html';
+        })
+      })
 
 //Guardar en localStorage
 

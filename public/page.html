@@ -201,7 +201,7 @@
               <div>
                   <label>Foto</label>
                   <input type="file" name="photo" id="photo">
-                
+
               </div>
               <div>
                   <label>Observación</label>
@@ -296,6 +296,8 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+
+    const auth = firebase.auth();
   </script>
 
   <!-- BOOTSTRAP SCRIPT -->
