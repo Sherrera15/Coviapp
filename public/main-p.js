@@ -11,6 +11,8 @@ logout.addEventListener('click', e => {
         })
       })
 
+
+
 //Guardar en localStorage
 
 var ident = [],

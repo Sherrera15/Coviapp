@@ -4,27 +4,51 @@
 <head>
   <meta charset="utf-8">
   <title>Coviapp</title>
+  <script type="text/javascript">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+  <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <!-- Los iconos tipo Solid de Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <link rel="shortcut icon" href="img/virus.png" type="image/x-icon">
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/master.css">
+
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
   <!-- GOOGLE MAPS -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeeHxu5-sooPCCiDYmYjqBJCYYXeneCDc&callback=initMap&libraries=&v=weekly" defer></script>
 
+<!-- DATA TABLE -->
+  <!-- <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <script type="text/javascript">
+    $(document).ready(function() {
+        //Asegurate que el id que le diste a la tabla sea igual al texto despues del simbolo #
+        $('#userList').DataTable();
+    } );
+  </script> -->
+
+  <!--Estilos del mapa-->
   <style type="text/css">
-    /* Always set the map height explicitly to define the size of the div
-    * element that contains the map. */
     #map {
       margin-top: 0rem;
       height: 65%;
 
     }
 
-    /* Optional: Makes the sample page fill the window. */
     html,
     body {
       height: 100%;
@@ -33,11 +57,11 @@
     }
   </style>
 
+  <!--GOOGLE MAPS-->
   <script>
     (function(exports) {
       "use strict";
 
-      // GOOGLE MAPS
       function initMap() {
         var uluru = {
           lat: 0,
@@ -50,6 +74,8 @@
 
         renderData()
 
+        //API DE coronavirus
+
         async function getData() {
           const response = await fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
           const data = await response.json();
@@ -57,6 +83,8 @@
         }
 
         var popup = new google.maps.InfoWindow()
+
+        //MOSTRAR LOS CASOS EN EL MAPA
 
         function renderExtraData({
           confirmed,
@@ -66,15 +94,18 @@
           countryregion,
           lastupdate
         }) {
-          return `
-            <div class="covid">
-              <p><b>${provincestate} - ${countryregion}</b></p>
-              <p> Confirmados: ${confirmed}</p>
-              <p> Recuperados: ${recovered}</p>
-              <p> Fallecidos: ${deaths}</p>
-              <p>Actualización: ${lastupdate}</p>
-            </div>
-            `
+
+
+            return `
+              <div class="covid">
+                <p><b>${provincestate} - ${countryregion}</b></p>
+                <p> Confirmados: ${confirmed}</p>
+                <p> Recuperados: ${recovered}</p>
+                <p> Fallecidos: ${deaths}</p>
+                <p>Actualización: ${lastupdate}</p>
+              </div>
+              `
+
         }
 
 
@@ -116,65 +147,108 @@
       <a href="index.html" id="logout">Cerrar sesión</a>
     </nav>
   </header>
-
-  <main>
-
-    <div class="container">
-      <h1 class="brand"><span>Formulario</span> Pacientes</h1>
-      <div class="wrapper">
-        <div class="company-info">
-          <h3>Coviapp</h3>
-          <ul>
-            <li><i class="fa fa-road"></i> Por favor llene los siguientes datos.</li>
-            <li><i class="fa fa-phone"></i> Estos datos quedarán registrados en la base de datos Firebase.</li>
-          </ul>
+  <div class="container">
+	<div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+		<ul class="nav nav-tabs justify-content-end">
+      <li class="nav-item">
+			     <a class="nav-link" id="form-table" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Formulario</a>
+			</li>
+			<li class="nav-item">
+			     <a class="nav-link active" id="list-table" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Lista</a>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-table">
+    <div class="card">
+        <div class="card-header">
+          <h4 class="brand"><span>Formulario</span> Pacientes</h4>
         </div>
-        <div class="contact">
-          <h3>Registro:</h3>
+        <div class="card-body">
+          <div class="contact">
           <form id="contactForm">
+              <div>
+                  <label>ID</label>
+                  <input type="number" name="identification" id="identification">
+              </div>
+              <div>
+                  <label>Nombre</label>
+                  <input type="text" name="name" id="name">
+              </div>
+              <div>
+                  <label>Apellido</label>
+                  <input type="text" name="lastname" id="lastname">
+              </div>
+              <div>
+                  <label>Email</label>
+                  <input type="text" name="email" id="email">
+              </div>
+              <div>
+                  <label>Teléfono</label>
+                  <input type="number" name="phone" id="phone">
+              </div>
+              <div>
+                  <label>Dirección</label>
+                  <input type="text" name="address" id="address">
+              </div>
+              <div>
+                  <label>Foto</label>
+                  <input type="file" name="photo" id="photo">
 
-            <p>
-              <label>Número de identificación</label>
-              <input type="number" name="userId" id="userId">
-            </p>
-            <p>
-              <label>Nombre</label>
-              <input type="text" name="name" id="name">
-            </p>
-            <p>
-              <label>Apellido</label>
-              <input type="text" name="lastname" id="lastname">
-            </p>
-            <p>
-              <label>Correo electrónico</label>
-              <input type="email" name="email" id="email">
-            </p>
-            <p>
-              <label>Número telefónico</label>
-              <input type="number" name="phone" id="phone">
-            </p>
-            <p>
-              <label>Dirección</label>
-              <input type="text" name="address" id="address">
-            </p>
-            <p>
-              <label>Foto</label>
-              <input type="file" name="photo" id="photo">
-            </p>
-            <p class="full">
-              <label>Observación</label>
-              <textarea name="message" rows="5" id="message"></textarea>
-            </p>
-            <p class="full">
-              <button id="saveBtn">Enviar</button>
-            </p>
-
+              </div>
+              <div>
+                  <label>Observación</label>
+                  <input type="text" name="message" id="message">
+              </div>
+              <div  class="form-action-buttons">
+                  <button type="button" name="button" class="agg" id = "saveBtn">Agregar</button>
+                  <button type="reset" name="button" class="agg" id = "saveReset">Limpiar</button>
+              </div>
           </form>
-
+        </div>
         </div>
       </div>
     </div>
-  </main>
+
+
+			<div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-table">
+        <div class="card">
+          <div class="card-header">
+            <h4>Lista de Pacientes</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+            	<table id="userList" class="table table-bordered table-hover table-striped">
+            		<thead class="thead-light">
+            		<tr>
+                  <th scope="col">N° identificación</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellidos</th>
+                  <th scope="col">Correo electrónico</th>
+                  <th scope="col">Teléfono</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Foto</th>
+                  <th scope="col">Observación</th>
+
+            		</tr>
+            		</thead>
+            		<tbody>
+
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="main-p.js" ></script>
+  <script src="list.js"></script>
+
+
+
   <footer>
     <div class="contenedor-footer">
       <div class="content-foo">
@@ -214,9 +288,9 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+
+    const auth = firebase.auth();
   </script>
-
-
 
   <!-- BOOTSTRAP SCRIPT -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -225,7 +299,5 @@
 
   <!-- Libreria de alertas -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-  <script src="main-p.js" </script>
-    < /body> <
-    /html>
+    </body>
+   </html>

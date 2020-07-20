@@ -29,17 +29,6 @@
   <!-- GOOGLE MAPS -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeeHxu5-sooPCCiDYmYjqBJCYYXeneCDc&callback=initMap&libraries=&v=weekly" defer></script>
 
-<!-- DATA TABLE -->
-  <!-- <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-  <script type="text/javascript">
-    $(document).ready(function() {
-        //Asegurate que el id que le diste a la tabla sea igual al texto despues del simbolo #
-        $('#userList').DataTable();
-    } );
-  </script> -->
 
   <!--Estilos del mapa-->
   <style type="text/css">
@@ -165,42 +154,42 @@
         </div>
         <div class="card-body">
           <div class="contact">
-          <form id="contactForm">
+          <form id="contactForm" >
               <div>
                   <label>ID</label>
-                  <input type="number" name="identification" id="identification">
+                  <input type="number" placeholder="Ingrese el número de identificación" name="identification" id="identification" required>
               </div>
               <div>
                   <label>Nombre</label>
-                  <input type="text" name="name" id="name">
+                  <input type="text" placeholder="Ingrese el nombre" name="name" id="name" required >
               </div>
               <div>
                   <label>Apellido</label>
-                  <input type="text" name="lastname" id="lastname">
+                  <input type="text" placeholder="Ingrese el apellido" name="lastname" id="lastname" required>
               </div>
               <div>
-                  <label>Email</label>
-                  <input type="text" name="email" id="email">
+                  <label>Correo electrónico</label>
+                  <input type="text" placeholder="Ingrese el correo electrónico" name="email" id="email" required>
               </div>
               <div>
                   <label>Teléfono</label>
-                  <input type="number" name="phone" id="phone">
+                  <input type="number" placeholder="Ingrese el número de teléfono" name="phone" id="phone" required>
               </div>
               <div>
                   <label>Dirección</label>
-                  <input type="text" name="address" id="address">
+                  <input type="text" placeholder="Ingrese la dirección" name="address" id="address" required>
               </div>
               <div>
                   <label>Foto</label>
-                  <input type="file" name="photo" id="photo">
+                  <input type="file" placeholder="Adjunte la foto" name="photo" id="photo" required>
 
               </div>
               <div>
                   <label>Observación</label>
-                  <input type="text" name="message" id="message">
+                  <input type="text" placeholder="Ingrese alguna observación o mensaje" name="message" id="message" required>
               </div>
               <div  class="form-action-buttons">
-                  <button type="button" name="button" class="agg" id = "saveBtn">Agregar</button>
+                  <button type="submit" name="button" class="agg" id = "saveBtn" >Agregar</button>
                   <button type="reset" name="button" class="agg" id = "saveReset">Limpiar</button>
               </div>
           </form>
@@ -271,6 +260,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
 
 
   <script>
