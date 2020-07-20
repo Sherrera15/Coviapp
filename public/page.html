@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Coviapp</title>
-  <script type="text/javascript">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
@@ -66,9 +65,9 @@
         //API DE coronavirus
 
         async function getData() {
-          const response = await fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
+          const response = await fetch('https://corona.lmao.ninja/v2/countries')
           const data = await response.json();
-          return data
+          return data;
         }
 
         var popup = new google.maps.InfoWindow()
@@ -76,22 +75,34 @@
         //MOSTRAR LOS CASOS EN EL MAPA
 
         function renderExtraData({
-          confirmed,
+          cases,
+          todayCases,
           deaths,
+          todayDeaths,
           recovered,
-          provincestate,
-          countryregion,
-          lastupdate
+          todayRecovered,
+          tests,
+          active,
+          critical,
+          continent,
+          country,
+          updated
         }) {
 
 
             return `
               <div class="covid">
-                <p><b>${provincestate} - ${countryregion}</b></p>
-                <p> Confirmados: ${confirmed}</p>
-                <p> Recuperados: ${recovered}</p>
+                <p><b>${continent} - ${country}</b></p>
+                <p> Casos: ${cases}</p>
+                <p> Casos hoy: ${todayCases}</p>
                 <p> Fallecidos: ${deaths}</p>
-                <p>Actualización: ${lastupdate}</p>
+                <p>Fallecidos hoy: ${todayDeaths}</p>
+                <p>Recuperados: ${recovered}</p>
+                <p>Recuperados hoy: ${todayRecovered}</p>
+                <p>Pruebas: ${tests}</p>
+                <p>Activos: ${active}</p>
+                <p>Estado critico: ${critical}</p>
+                <p>Actualización: ${updated}</p>
               </div>
               `
 
@@ -105,8 +116,8 @@
           data.forEach(item => {
             var marker = new google.maps.Marker({
               position: {
-                lat: item.location.lat,
-                lng: item.location.lng,
+                lat: item.countryInfo.lat,
+                lng: item.countryInfo.long,
               },
               map: map,
               icon: 'img/virus.png'

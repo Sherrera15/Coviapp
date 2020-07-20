@@ -242,6 +242,8 @@ h3 {
   width: 100%;
   padding: 1em;
   border: 1px solid #c9e6ff;
+  border-radius: 5px;
+  border-color: #b83db8;
 
 }
 
@@ -262,6 +264,7 @@ h3 {
 .agg{
   margin-left: 11rem;
 }
+
 
 .alert {
   text-align: center;

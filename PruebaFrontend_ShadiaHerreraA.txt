@@ -1,0 +1,18 @@
+-----Prueba Técnica Desarrollador Front End -----
+¡Hola! esto son los datos:
+
+Link github: https://github.com/Sherrera15/Coviapp.git
+
+Url para acceder a la página: appcovid-48869.firebaseapp.com
+
+User: prueba.seleccion@gmail.com
+Password: 123456789
+
+PD: Corregí lo del formulario, implementé localStorage.
+Lo del tiempo real en el mapa, la API que usé no me lo permitió, lo cual se me dificultó y no 
+pude solucionarlo.
+
+Muchas gracias.
+
+At; Shadia Herrera A.
+ 
